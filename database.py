@@ -1,9 +1,10 @@
+import os
 import sqlite3
 import json
 import datetime
 import numpy as np
 
-DB_FILE = 'drift_logs.db'
+DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'drift_logs.db')
 
 class NumpyEncoder(json.JSONEncoder):
     """ Special json encoder for numpy types """

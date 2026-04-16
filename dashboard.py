@@ -151,13 +151,17 @@ with col_right:
     
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
+# Resolve paths relative to this script's location (works locally AND on Streamlit Cloud)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASELINE_DIR = os.path.join(BASE_DIR, 'baseline')
+
 # Load baseline resources
 @st.cache_resource
 def load_artifacts():
     try:
-        model = joblib.load('baseline/model.pkl')
-        baseline_stats = joblib.load('baseline/baseline_stats.pkl')
-        baseline_preds = joblib.load('baseline/baseline_predictions.pkl')
+        model = joblib.load(os.path.join(BASELINE_DIR, 'model.pkl'))
+        baseline_stats = joblib.load(os.path.join(BASELINE_DIR, 'baseline_stats.pkl'))
+        baseline_preds = joblib.load(os.path.join(BASELINE_DIR, 'baseline_predictions.pkl'))
         return model, baseline_stats, baseline_preds
     except Exception as e:
         return None, None, None
