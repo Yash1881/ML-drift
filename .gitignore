@@ -15,17 +15,8 @@ venv/
 env/
 ENV/
 
-# Model artifacts (large binary files - regenerate with train_model.py)
-baseline/model.pkl
-baseline/baseline_predictions.pkl
-baseline/baseline_stats.pkl
-baseline/generic_baseline.pkl
-
-# Database (local state, don't commit)
-drift_logs.db
-
-# Data files (may be large / sensitive)
-data/
+# Baseline directory tracked (pkl files included for deployment)
+# If pkl files get too large, add them back and use a startup script instead
 
 # OS
 .DS_Store
