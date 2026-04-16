@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Model artifacts (large binary files - regenerate with train_model.py)
+baseline/model.pkl
+baseline/baseline_predictions.pkl
+baseline/baseline_stats.pkl
+baseline/generic_baseline.pkl
+
+# Database (local state, don't commit)
+drift_logs.db
+
+# Data files (may be large / sensitive)
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.env
+.streamlit/secrets.toml

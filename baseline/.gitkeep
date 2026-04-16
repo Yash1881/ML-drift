@@ -1,0 +1,3 @@
+# This file keeps the baseline/ directory tracked in git.
+# Model artifacts (.pkl files) are gitignored because they are large.
+# Run `python train_model.py` after cloning to regenerate them.
